@@ -2,7 +2,7 @@
 	"name": "treschelet/yii2-news",
 	"description": "Make news posts",
 	"type": "yii2-extension",
-	"keywords": "["yii2","extension","news"]",
+	"keywords": ["yii2","extension","news"],
 	"license": "BSD-3-Clause",
 	"authors": [
 		{
@@ -10,9 +10,18 @@
 			"email": "treschelet@gmail.com"
 		}
 	],
+	"repositories":[
+		{
+			"type": "git",
+			"url": "https://github.com/treschelet/yii2-news.git"
+		}
+	],
 	"autoload": {
 		"psr-4": {
 			"treschelet\\news\\": ""
 		}
+	},
+	"require": {
+		"treschelet/yii2-news": "dev-master"
 	}
 }
