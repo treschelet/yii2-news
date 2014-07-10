@@ -10,18 +10,12 @@
 			"email": "treschelet@gmail.com"
 		}
 	],
-	"repositories":[
-		{
-			"type": "git",
-			"url": "https://github.com/treschelet/yii2-news.git"
-		}
-	],
+	"require": {
+		"yiisoft/yii2": "*"
+	},
 	"autoload": {
 		"psr-4": {
 			"treschelet\\news\\": ""
 		}
-	},
-	"require": {
-		"treschelet/yii2-news": "dev-master"
 	}
 }
