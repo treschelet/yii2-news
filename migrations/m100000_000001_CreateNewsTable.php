@@ -3,7 +3,7 @@
 use yii\db\Schema;
 
 
-class m000000_000001_CreateNewsTable extends \yii\db\Migration
+class m100000_000001_CreateNewsTable extends \yii\db\Migration
 {
     public function safeUp()
     {
