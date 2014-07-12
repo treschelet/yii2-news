@@ -1,12 +1,30 @@
-<div class="news-default-index">
-    <h1><?= $this->context->action->uniqueId ?></h1>
+<?php
+
+use yii\helpers\Html;
+use yii\widgets\ListView;
+
+/* @var $this yii\web\View */
+/* @var $searchModel treschelet\news\models\NewsSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = 'News';
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="news-index">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+    <?php echo $this->render('_search', ['model' => $searchModel]); ?>
+
     <p>
-        This is the view content for action "<?= $this->context->action->id ?>".
-        The action belongs to the controller "<?= get_class($this->context) ?>"
-        in the "<?= $this->context->module->id ?>" module.
+        <?= Html::a('Create News', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    <p>
-        You may customize this page by editing the following file:<br>
-        <code><?= __FILE__ ?></code>
-    </p>
+
+    <?= ListView::widget([
+        'dataProvider' => $dataProvider,
+        'itemOptions' => ['class' => 'item'],
+        'itemView' => function ($model, $key, $index, $widget) {
+                return Html::a(Html::encode($model->title), ['view', 'id' => $model->id]);
+            },
+    ]) ?>
+
 </div>
