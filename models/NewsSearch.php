@@ -53,12 +53,12 @@ class NewsSearch extends News
 
         $query->andFilterWhere([
             'id' => $this->id,
+            'image' => $this->image,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'image', $this->image])
             ->andFilterWhere(['like', 'summary', $this->summary])
             ->andFilterWhere(['like', 'content', $this->content]);
 

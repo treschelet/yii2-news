@@ -21,7 +21,7 @@ class m100000_000001_CreateNewsTable extends \yii\db\Migration
         $this->createTable('{{%news}}', [
             'id' => Schema::TYPE_PK,
             'title' => Schema::TYPE_STRING . '(255) NOT NULL',
-            'image' => Schema::TYPE_STRING . '(255)',
+            'image' => Schema::TYPE_INTEGER . ' NULL',
             'summary' => Schema::TYPE_TEXT,
             'content'  => schema::TYPE_TEXT,
             'created_at' => Schema::TYPE_TIMESTAMP . ' DEFAULT CURRENT_TIMESTAMP',

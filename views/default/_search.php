@@ -19,8 +19,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'title') ?>
 
-    <?= $form->field($model, 'image') ?>
-
     <?= $form->field($model, 'summary') ?>
 
     <?= $form->field($model, 'content') ?>

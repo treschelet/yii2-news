@@ -9,7 +9,7 @@ use Yii;
  *
  * @property integer $id
  * @property string $title
- * @property string $image
+ * @property integer $image
  * @property string $summary
  * @property string $content
  * @property string $created_at
@@ -32,9 +32,10 @@ class News extends \yii\db\ActiveRecord
     {
         return [
             [['title'], 'required'],
+            [['image'], 'integer'],
             [['summary', 'content'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
-            [['title', 'image'], 'string', 'max' => 255]
+            [['title'], 'string', 'max' => 255]
         ];
     }
 
